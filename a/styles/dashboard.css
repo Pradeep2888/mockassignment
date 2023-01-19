@@ -1,0 +1,12 @@
+#user_Data{
+    display: grid;
+    gap: 1%;
+    grid-template-columns: repeat(3,auto);
+}
+#reject{
+    color: red;
+    margin-right: 1%;
+}
+#confirm{
+    color: green;
+}

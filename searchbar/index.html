@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    article{
+        background-color: rgb(219, 129, 11);
+        float: left;
+        width: 70%;
+    }
+    aside{
+        background-color: aquamarine;
+        float: left;
+        width: 30%;
+    }
+  </style>
+</head>
+<body>
+    <!-- <input type="text" onkeyup="betterFunction()" /> -->
+
+    <!-- <div> -->
+
+        <article>
+            <h1>Conetnt</h1>
+            <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+        </article>
+
+        <aside>
+            <h1>pradeep</h1>
+            <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+        </aside>
+
+    <!-- </div> -->
+
+
+</body>
+</html>
+
+<script>
+    let count=0
+    const getData=()=>{
+        count++
+        console.log("data"+count)
+    }
+
+
+    const debounce=function(fn,d){
+        let timer
+        return function(){
+            let context=this
+            args=arguments
+
+           
+
+            clearTimeout(timer)
+
+            timer=setTimeout(()=>{
+                console.log(args)
+                // getData.apply(context,arguments)
+            },d)
+        }
+    }
+
+    
+
+    const betterFunction=debounce(getData,300)
+
+</script>

@@ -1,0 +1,85 @@
+.navbar{
+    /* position: absolute; */
+/* left: 0%; */
+/* right: 0%; */
+/* top: 0%; */
+/* bottom: 98.7%; */
+display: flex;
+background: #434CCC;
+justify-content: space-between;
+height: 48px;
+}
+.card1{
+    height: 48px;
+    left: 19.38%;
+    right: 83.54%;
+    top: calc(50% - 48px/2 - 3032px);
+}
+.card1>p{
+font-family: 'DM Serif Display';
+font-style: normal;
+font-weight: 400;
+/* font-size: 100%; */
+/* margin: auto; */
+/* line-height: 48px; */
+color: #FFFFFF;
+}
+
+.card2{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+.card2>p{
+    /* position: absolute; */
+height: 24px;
+left: 53.54%;
+right: 23.96%;
+top: calc(50% - 24px/2 - 3032px);
+
+/* Text */
+
+ font-family: 'DM Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px; 
+/* identical to box height, or 150% ; */
+
+text-align: right;
+
+/* Text_White */
+
+color: #FFFFFF;
+}
+
+.card3{
+    box-sizing: border-box;
+
+/* position: absolute; */
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+}
+
+.signup{
+  
+    height: 24px;
+    left: 33.24%;
+    right: 33.24%;
+    top: calc(50% - 24px/2 + 1px);
+    
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    
+    background: #434CCC;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+    color: #FFFFFF;
+} 

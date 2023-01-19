@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <div>
+
+
+    <input type="number" id="first" maxlength="1"
+     onkeyup="clickevent(this,'second',0)" 
+     />
+
+    <input type="number" id="second" maxlength="1"
+     onkeyup="clickevent(this,'third',1)" 
+     onkeydown="removeotp(event,'first')"
+     />
+
+    <input type="number" id="third" maxlength="1"
+     onkeyup="clickevent(this,'forth',2)" 
+     onkeydown="removeotp(event,'second')"
+     />
+
+    <input type="number" id="forth" maxlength="1"
+    onkeyup="clickevent(this,'stop',3)" 
+     onkeydown="removeotp(event,'third')"
+     />
+
+   </div>
+
+   <button id="submit">Submit</button>
+
+   
+</body>
+</html>
+
+<script>
+    var bag=[0,0,0,0]
+    function clickevent(first,last,i){
+        if(last==="stop"){
+            // bag=bag+first.value
+            bag[i]=(first.value)
+        }
+        else if(first.value){
+            // bag=bag+first.value
+            bag[i]=(first.value)
+            document.getElementById(last).focus()
+        }
+       
+    }
+    function removeotp(e,first){
+        let a=document.getElementById("forth").value=""
+        if(e.code=="Backspace"){
+            bag.pop()
+            document.getElementById(first).focus()
+            if(first==="second"){
+                bag.pop()
+            }
+        }
+    }
+    document.getElementById("submit").addEventListener("click",showOtp)
+    function showOtp(){
+        console.log(bag)
+    }
+</script>
